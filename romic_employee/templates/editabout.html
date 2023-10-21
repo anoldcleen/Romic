@@ -1,0 +1,439 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card-body">
+
+    <div class="form-group col">  
+    <label class="row-sm-12 col-form-label row-lg-20"></label>  
+    <div class="col-sm-12">  
+    <h3><strong>ROCAF    </strong></h3> 
+    <p> <strong>Update Rocaf  </strong></p> 
+    </div>  
+  </div> 
+
+
+<form method="POST" class="post-form" action="/updateabout/{{about.id}}">  
+        {% csrf_token %}  
+ 
+ 
+
+ <div class="container"> 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> PROJECT NAME:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="projectname" id="id-projectname" required maxlength="50" value="{{ about.projectname }}"/>  
+    </div>  
+  </div>  
+</div>
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> PROJECT MISSION:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="mission" id="id_mission" required maxlength="100" value="{{ about.mission }}" />  
+    </div> 
+    </div> 
+  </div> 
+
+  <br/> 
+ 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> PROJECT VISION:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="vision" id="id_vision" required maxlength="254" value="{{ about.vision }}" />  
+    </div>
+    </div>  
+  </div>  
+    <br/> 
+ 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> PROJECT objective:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="objective" id="id_objective" required maxlength="15" value="{{ about.objective }}" />  
+    </div>
+    </div>  
+  </div> 
+
+
+  <br/>
+  <br/>
+
+  </div> 
+
+<div class="col-sm-12">  
+
+    <p> <strong>UPDATE ROCAF CONTACTS  </strong></p> 
+    </div> 
+
+     <div class="container"> 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> POSTAL  ADDRESS:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="postalddress" id="id-postalddress" required maxlength="50" value="{{ about.postalddress }}"/>  
+    </div>
+    </div>  
+  </div>  
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> PHONE NUMBER 1:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="phonenumber1" id="id_phonenumber1" required maxlength="100" value="{{ about.phonenumber1 }}" />  
+    </div>  
+</div>
+  </div> 
+
+  <br/> 
+ 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> PHONE NUMBER 2:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="vision" id="id_phonenumber2" required maxlength="254" value="{{ about.phonenumber2 }}" />  
+    </div>  
+</div>
+  </div>  
+    <br/> 
+ 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> EMAIL ADDRESS:  </strong></label> 
+    <div class="col-sm-12">  
+         <div class="card">
+        <input type="text" name="aboutemail" id="id_aboutemail" required maxlength="15" value="{{ about.aboutemail }}" />  
+    </div>  
+</div>
+
+  </div> 
+
+  <br/>
+  <br/>
+
+
+  </div> 
+
+
+    <div class="col-sm-12">  
+
+    <p> <strong>Update Rocaf Partners  </strong></p> 
+    </div> 
+     <div class="container"> 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> PARTNER NAME:  </strong></label> 
+    <div class="col-sm-12">
+    <div class="card">  
+        <input type="text" name="partnername" id="id_partnername" required maxlength="50" value="{{ about.partnername }}"/>  
+    </div>
+    </div>  
+  </div>  
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> PARTNER DESCRIPTION :  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="partnerdescription" id="id_partnerdescription" required maxlength="100" value="{{ about.partnerdescription }}" />  
+    </div>  
+</div>
+  </div> 
+
+  <br/> 
+ 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> PARTNER NAME 2:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="partnername2" id="id_partnername2" required maxlength="254" value="{{ about.partnername2 }}" />  
+    </div>  
+</div>
+  </div>  
+    <br/> 
+ 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> PARTNER DECSRIPTION 2:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="partnerdescription2" id="id_partnerdescription2" required maxlength="15" value="{{ about.partnerdescription2 }}" />  
+    </div>
+    </div>  
+  </div> 
+ </div> 
+
+  <br/>
+  <br/>
+
+ <div class="col-sm-12">  
+
+    <p> <strong>Update Rocaf Location  </strong></p> 
+    </div> 
+
+     <div class="container"> 
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> LOCATION  MAIN BRANCH:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="address1" id="id_address1" required maxlength="50" value="{{ about.address1 }}"/>  
+    </div>  
+</div>
+  </div>  
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> LOCATION BRANCH  2:  </strong></label> 
+    <div class="col-sm-12">  
+        <div class="card">
+        <input type="text" name="address2" id="id_address2" required maxlength="100" value="{{ about.address2 }}" />  
+    </div>  
+
+  </div> 
+
+  <br/> 
+ 
+
+ </div> 
+
+  <br/>
+  <br/>
+
+<div class="form-group col">  
+    <label class="row-sm-12 col-form-label row-lg-20"></label>  
+    <div class="col-sm-12">  
+    <h3><strong>TESTIMONIALS </strong></h3> 
+   
+    </div>  
+  </div> 
+     <div class="container"> 
+
+     <div class="row mt-1">
+        <div class="col-sm-12">  
+    <p><strong>TESTIMONIAL one   </strong></p> 
+   
+    </div> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonial1" id="id_testimonial1" required maxlength="50" value="{{ about.testimonial1 }}"/>  
+    </div>  
+</div>
+  </div>  
+  <br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL ROLE 1 :  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonialrole1" id="id_testimonialrole1" required maxlength="50" value="{{ about.testimonialrole1 }}"/>  
+    </div>  
+  </div>  
+</div>
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL DESCRIPTION  :  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonialdecription1" id="id_testimonialdecription1" required maxlength="100" value="{{ about.testimonialdecription1 }}" />  
+    </div>  
+</div>
+  </div>   
+  <br/> 
+
+
+
+ 
+
+ </div> 
+
+
+
+
+  <br/>
+  <div class="row mt-1">
+        <div class="col-sm-12">  
+    <p><strong>TESTIMONIAL 2   </strong></p> 
+   
+    </div> 
+
+     <div class="container"> 
+
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL Second:  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonial2" id="id_testimonial2" required maxlength="50" value="{{ about.testimonial2 }}"/>  
+    </div>  
+</div>
+  </div>  
+  <br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL ROLE 2 :  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonialrole2" id="id_testimonialrole2" required maxlength="50" value="{{ about.testimonialrole2 }}"/>  
+    </div>  
+      <div class="card">
+  </div>  
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL DESCRIPTION 2  :  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonialdecription2" id="id_testimonialdecription2" required maxlength="100" value="{{ about.testimonialdecription2 }}" />  
+    </div>  
+  </div>   
+</div>
+
+  <br/> 
+
+
+        <div class="row mt-1">
+        <div class="col-sm-12">  
+    <p><strong>TESTIMONIAL 3  </strong></p> 
+   
+    </div> 
+     <div class="container"> 
+
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL Third:  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonial3" id="id_testimonial3" required maxlength="50" value="{{ about.testimonial3 }}"/>  
+    </div>  
+</div>
+  </div>  
+  <br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL ROLE 3 :  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonialrole3" id="id_testimonialrole3" required maxlength="50" value="{{ about.testimonialrole3 }}"/>  
+    </div>  
+</div>
+  </div>  
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL DESCRIPTION 3  :  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonialdecription3" id="id_testimonialdecription3" required maxlength="100" value="{{ about.testimonialdecription3 }}" />  
+    </div>  
+</div>
+  </div>   
+
+  <br/> 
+
+
+  <div class="row mt-1">
+        <div class="col-sm-12">  
+    <p><strong>TESTIMONIAL 4  </strong></p> 
+   
+    </div> 
+
+     <div class="container"> 
+
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL Fourth:  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonial4" id="id_testimonial4" required maxlength="50" value="{{ about.testimonial4 }}"/>  
+    </div>  
+  </div>  
+</div>
+  <br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL ROLE 4 :  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonialrole4" id="id_testimonialrole4" required maxlength="50" value="{{ about.testimonialrole4 }}"/>  
+    </div>  
+</div>
+  </div>  
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL DESCRIPTION 4  :  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonialdecription4" id="id_testimonialdecription4" required maxlength="100" value="{{ about.testimonialdecription4 }}" />  
+    </div>  
+  </div>   
+</div>
+  <br/> 
+
+
+       <div class="row mt-1">
+        <div class="col-sm-12">  
+    <p><strong>TESTIMONIAL 5   </strong></p> 
+   
+    </div> 
+
+     <div class="container"> 
+
+     <div class="row mt-1">
+    <label class="col-sm-4 col-form-label"><strong> TESTIMONIAL Fifth:  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonial5" id="id_testimonial5" required maxlength="50" value="{{ about.testimonial5 }}"/>  
+    </div>  
+  </div>  
+</div>
+  <br/>
+
+    <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL ROLE 5 :  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+        <input type="text" name="testimonialrole5" id="id_testimonialrole5" required maxlength="50" value="{{ about.testimonialrole5 }}"/>  
+    </div>  
+  </div>  
+</div>
+
+  <br/>
+
+  
+     <div class="row mt-1">
+    <label class="col-sm-12 col-form-label"><strong> TESTIMONIAL DESCRIPTION 5 :  </strong></label> 
+    <div class="col-sm-12">  
+          <div class="card">
+
+        <input type="text" name="testimonialdecription5" id="id_testimonialdecription5" required maxlength="100" value="{{ about.testimonialdecription5 }}" />  
+    </div>  
+  </div>   
+
+ </div>
+  <br/>
+
+ 
+
+ 
+ 
+
+
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-success">UPDATE  ABOUT ROCAF </button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+
+{% endblock %}
